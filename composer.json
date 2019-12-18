@@ -1,0 +1,38 @@
+{
+    "name": "onethirtyone/laravel-docparser",
+    "description": "A Laravel package to parse and display markdown documentation repositories",
+    "require": {
+        "laravel/framework": "^5.8|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0|^8.0",
+        "orchestra/testbench": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "onethirtyone\\docparser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "onethirtyone\\docparser\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "onethirtyone\\docparser\\DocParserProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robb Fountain",
+            "email": "robb@131studios.com"
+        }
+    ]
+}
