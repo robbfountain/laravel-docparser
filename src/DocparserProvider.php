@@ -16,14 +16,14 @@ class DocparserProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
-        $this->loadViewsFrom(__DIR__ . '/resources/views/', 'docparser');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'docparser');
 
         $this->publishes([
-            __DIR__ . '/resources/views' => resource_path('views/vendor/docparser'),
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/docparser'),
         ]);
 
         $this->publishes([
-            __DIR__ . '/public/' => public_path('vendor/docparser')
+            __DIR__ . '/../public/' => public_path('vendor/docparser')
         ], 'public');
 
         if ($this->app->runningInConsole()) {
