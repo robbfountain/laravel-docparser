@@ -20,11 +20,11 @@ class DocparserProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/docparser'),
-        ]);
+        ],'docparser-views');
 
         $this->publishes([
             __DIR__ . '/../public/' => public_path('vendor/docparser')
-        ], 'public');
+        ], 'docparser-public');
 
         if ($this->app->runningInConsole()) {
             $this->commands([

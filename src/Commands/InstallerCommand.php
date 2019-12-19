@@ -4,8 +4,8 @@
 namespace onethirtyone\docparser;
 
 
-use App\Backup;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 
 class InstallerCommand extends Command
 {
@@ -40,7 +40,16 @@ class InstallerCommand extends Command
      */
     public function handle()
     {
-       //
+        if (!file_exists(resource_path('docs'))) {
+            $this->comment('Creating Docs Directory');
+            mkdir(resource_path('docs'));
+        }
+
+        $this->comment('Publishing Views');
+        Artisan::call('vendor:publish',['--tag' => 'docparser-views']);
+
+        $this->comment('Publishing Assets');
+        Artisan::call('vendor:publish',['--tag' => 'docparser-public']);
     }
 
 }

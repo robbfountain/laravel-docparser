@@ -3,3 +3,16 @@
 @tailwind components;
 
 @tailwind utilities;
+
+h2 {
+  @apply font-semibold text-gray-900 text-lg;
+}
+
+li {
+  @apply ml-3 my-1;
+}
+
+a {
+  @apply text-blue-400
+}
+

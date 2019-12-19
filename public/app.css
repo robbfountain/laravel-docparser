@@ -10845,6 +10845,22 @@ video {
   z-index: auto;
 }
 
+h2 {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 1.125rem;
+}
+
+li {
+  margin-left: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #63b3ed;
+}
+
 @media (min-width: 370px) {
   .xs\:sr-only {
     position: absolute;
