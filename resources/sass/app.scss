@@ -4,8 +4,30 @@
 
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i&display=swap');
+
+body {
+  font-family: 'Nunito',sans-serif;
+}
+
+h1 {
+  @apply font-bold text-gray-900 text-3xl mb-4;
+}
+
 h2 {
-  @apply font-semibold text-gray-900 text-lg;
+  @apply font-semibold text-gray-900 text-2xl mt-8 mb-0;
+}
+
+.index h2:first-of-type {
+  @apply mt-0;
+}
+
+h3 {
+  @apply font-semibold text-gray-900 text-xl mt-8 mb-0;
+}
+
+h4 {
+  @apply font-semibold text-gray-900 text-lg mt-8 mb-0;
 }
 
 li {
@@ -13,6 +35,43 @@ li {
 }
 
 a {
-  @apply text-blue-400
+  @apply text-blue-400;
 }
+
+a:hover {
+  @apply underline;
+}
+
+p {
+  @apply leading-normal mt-2 mb-6 text-gray-700;
+}
+
+pre {
+  @apply bg-gray-100 p-4 border-b-4 border-gray-300 my-4;
+}
+
+pre code {
+  @apply text-sm text-gray-600;
+}
+
+code {
+  @apply text-red-400 p-1 bg-gray-100 text-sm;
+}
+
+blockquote {
+  @apply m-8 p-6 bg-orange-100 shadow-lg;
+}
+
+.brand {
+  @apply text-2xl text-gray-800 font-bold uppercase;
+  }
+
+.brand span {
+  @apply text-purple-400;
+}
+
+img {
+  @apply shadow-lg bg-white rounded;
+}
+
 

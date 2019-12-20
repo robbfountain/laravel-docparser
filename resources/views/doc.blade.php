@@ -12,20 +12,20 @@
         <!-- CSS -->
         <link href="/vendor/docparser/app.css" rel="stylesheet">
     </head>
-    <body class="tw-bg-gray-100" style="-webkit-print-color-adjust:exact;">
+    <body class="bg-gray-100" style="-webkit-print-color-adjust:exact;">
         <div>
-            <header>
-                <div class="container mx-auto">
-                    Bamo Docs
+            <header class="py-6 bg-white shadow">
+                <div class="container mx-auto pl-10">
+                    @include('docparser::partials.brand')
                 </div>
 
             </header>
 
             <!-- Main Content -->
             <div class="">
-                <div class="container mx-auto flex justify-between ">
-                    <aside class="w-1/3">
-                        <div class="">
+                <div class="container mx-auto flex justify-between pt-10">
+                    <aside class="w-1/3 md:pl-10">
+                        <div class="index">
                             {!! $index !!}
                         </div>
                     </aside>
